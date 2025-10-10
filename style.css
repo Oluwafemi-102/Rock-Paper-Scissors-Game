@@ -127,7 +127,8 @@ body {
   color: white;
   position: relative;
 }
-#locked{
+
+#locked {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -139,7 +140,8 @@ body {
   align-items: center;
   font-size: 6vmin;
 }
-#locked i{
+
+#locked i {
   font-size: 6vmin;
 }
 
@@ -196,6 +198,9 @@ body {
   gap: 1.5vmin;
   font-size: 3vmin;
   border-radius: 7vmin;
+}
+.no-entry{
+  cursor: not-allowed;
 }
 
 .game-options-locked:hover {
@@ -414,7 +419,8 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-audio{
+
+audio {
   display: none;
 }
 
@@ -434,35 +440,60 @@ audio{
   cursor: pointer;
   border-radius: 1vmin;
 }
+
 .button:hover {
   background-color: green;
 }
+
 .button p {
   font-size: 3vmin;
 }
 
 
 /* Flash animation */
-  .flash {
-    animation: flash 0.4s ease-in-out;
+.flash {
+  animation: flash 0.4s ease-in-out;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
   }
 
-  @keyframes flash {
-    0%   { opacity: 1; }
-    50%  { opacity: 0.3; }
-    100% { opacity: 1; }
+  50% {
+    opacity: 0.3;
   }
-  /* Shake animation */
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Shake animation */
 .shake {
   animation: shake 0.4s ease-in-out;
 }
 
 @keyframes shake {
-  0%   { transform: translateX(0); }
-  25%  { transform: translateX(-5px); }
-  50%  { transform: translateX(5px); }
-  75%  { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 #main {
@@ -595,8 +626,59 @@ audio{
     color: white;
   }
 
+  #select-game-level-1 {
+    height: 65%;
+    width: 100%;
+  }
+
+  .game-level-arrows {
+    width: 14vmin;
+    height: 14vmin;
+    font-size: 7vmin;
+    border-radius: 7vmin;
+  }
+
+  #select-game-level-2 {
+    height: 65%;
+    width: 100%;
+  }
+
+  .select-game-level-img {
+    height: 65vmin;
+    width: 65vmin;
+  }
+
+  .game-options {
+    width: 50%;
+    height: 35%;
+    gap: 2vmin;
+  }
+
+  #game-level-start-1 {
+    width: 100%;
+    height: 10vmin;
+    font-size: 8vmin;
+  }
+
+  #game-level-start-2 {
+    width: 100%;
+    height: 10vmin;
+    font-size: 8vmin;
+  }
+
+  .game-options-locked {
+    width: 100%;
+    height: 6vmin;
+    gap: 1.5vmin;
+    font-size: 6vmin;
+  }
+
   #game-page {
     overflow: hidden;
+  }
+
+  #inner-gamepage {
+    gap: 15vmin;
   }
 
   #header {
@@ -604,22 +686,133 @@ audio{
     padding-left: 3vmin;
   }
 
+  .pause-options {
+    width: 80%;
+    height: 40%;
+    gap: 5vmin;
+  }
+
+  .pause-options .game-options-locked {
+    font-size: 9vmin;
+  }
+
   #pause {
     margin-left: 0vmin;
   }
 
   h1 {
-    font-size: 2.6vmin;
+    font-size: 5vmin;
     letter-spacing: 2vmin;
   }
 
   #choose {
     margin-right: 21vmin;
+  }
+
+  #Score {
+    font-size: 6vmin;
+  }
+
+  .button {
+    width: 30vmin;
+    height: 10vmin;
+  }
+
+  #win-result {
+    width: 80%;
+    height: 40%;
+    gap: 2vmin;
+    font-size: 6vmin;
+  }
+
+  #lose-result {
+    width: 80%;
+    height: 40%;
+    gap: 2vmin;
+    font-size: 6vmin;
+  }
+
+  .result-options {
+    width: 35vmin;
+    height: 10vmin;
+    font-size: 6vmin;
   }
 }
 
 
 @media (min-width: 481px) {
+  #start {
+    width: 90vmin;
+    height: 120vmin;
+    gap: 4vmin;
+  }
+
+  #start-img {
+    height: 60vmin;
+  }
+
+  #start-button {
+    width: 40vmin;
+    height: 12vmin;
+    border-radius: 5vmin;
+    font-size: 8vmin;
+  }
+
+  .start-text {
+    font-size: 4vmin;
+    color: white;
+  }
+
+  #select-game-level-1 {
+    height: 80%;
+    width: 80%;
+  }
+
+  .game-level-arrows {
+    width: 12vmin;
+    height: 12vmin;
+    font-size: 7vmin;
+    border-radius: 6vmin;
+  }
+
+  #select-game-level-2 {
+    height: 80%;
+    width: 80%;
+  }
+
+  .select-game-level-img {
+    height: 48vmin;
+    width: 53vmin;
+  }
+
+  .game-options {
+    width: 50%;
+    height: 45%;
+    gap: 2vmin;
+  }
+
+  #game-level-start-1 {
+    width: 100%;
+    height: 8vmin;
+    font-size: 7vmin;
+  }
+
+  #game-level-start-2 {
+    width: 100%;
+    height: 8vmin;
+    font-size: 7vmin;
+  }
+
+  .game-options-locked {
+    width: 100%;
+    height: 6vmin;
+    gap: 1.5vmin;
+    font-size: 6vmin;
+  }
+  .game-options-locked i{
+    font-size: 4vmin;
+  }
+
   #game-page {
     overflow: hidden;
   }
@@ -628,10 +821,19 @@ audio{
     justify-content: space-between;
     padding-left: 3vmin;
   }
-
   #pause {
     margin-left: 0vmin;
   }
+  .pause-options {
+    width: 75%;
+    height: 55%;
+    gap: 6vmin;
+  }
+
+  .pause-options .game-options-locked{
+    font-size: 9vmin;
+  }
+
 
   h1 {
     font-size: 2.6vmin;
@@ -641,38 +843,580 @@ audio{
   #choose {
     margin-right: 21vmin;
   }
+  #Score {
+    font-size: 6vmin;
+  }
+
+  .button {
+    width: 30vmin;
+    height: 10vmin;
+  }
+
+  #win-result {
+    width: 60%;
+    height: 40%;
+    gap: 2vmin;
+    font-size: 6vmin;
+  }
+
+  #lose-result {
+    width: 60%;
+    height: 40%;
+    gap: 2vmin;
+    font-size: 6vmin;
+  }
+
+  .result-options {
+    width: 35vmin;
+    height: 10vmin;
+    font-size: 6vmin;
+  }
 }
 
-@media (min-width: 926px) {
-  h1 {
-    font-size: 3.8vmin;
+@media (min-width: 721px) {
+ #start {
+    width: 70%;
+    height: 70%;
+    gap: 3vmin;
   }
-  #choose {
-    margin-right: 21vmin;
-    margin-left: 4vmin;
-  }
-}
 
-@media (min-width: 1000px) {
-  h1 {
+  #start-img {
+    height: 40vmin;
+  }
+
+  #start-button {
+    width: 40vmin;
+    height: 10vmin;
+    border-radius: 5vmin;
+    font-size: 6vmin;
+  }
+
+  .start-text {
+    font-size: 3vmin;
+    color: white;
+  }
+
+  #select-game-level-1 {
+    height: 70%;
+    width: 68%;
+    gap: 2vmin;
+  }
+
+  .game-level-arrows {
+    width: 10vmin;
+    height: 10vmin;
+    font-size: 7vmin;
+    border-radius: 5vmin;
+  }
+
+  #select-game-level-2 {
+    height: 70%;
+    width: 68%;
+    gap: 2vmin;
+  }
+
+  .select-game-level-img {
+    height: 40vmin;
+    width: 43vmin;
+  }
+
+  .game-options {
+    width: 50%;
+    height: 45%;
+    gap: 1vmin;
+  }
+
+  #game-level-start-1 {
+    width: 100%;
+    height: 6vmin;
+    font-size: 5vmin;
+  }
+
+  #game-level-start-2 {
+    width: 100%;
+    height: 6vmin;
+    font-size: 6vmin;
+  }
+
+  .game-options-locked {
+    width: 100%;
+    height: 5vmin;
+    gap: 1.5vmin;
+    font-size: 4vmin;
+  }
+  .game-options-locked i{
     font-size: 3vmin;
   }
+  .pause-options {
+    width: 60%;
+    height: 50%;
+    gap: 4vmin;
+  }
+
+  .pause-options .game-options-locked{
+    font-size: 7vmin;
+  }
+
+
+  h1 {
+    font-size: 3vmin;
+    letter-spacing: 2vmin;
+  }
+
   #choose {
-    margin-right: 10vmin;
-    margin-left: 1vmin;
+    margin-right: 21vmin;
+  }
+  #Score {
+    font-size: 4vmin;
+  }
+
+  .button {
+    width: 20vmin;
+    height: 8vmin;
+  }
+
+  #win-result {
+    width: 50%;
+    height: 50%;
+    gap: 2vmin;
+    font-size: 6vmin;
+  }
+
+  #lose-result {
+    width: 50%;
+    height: 50%;
+    gap: 2vmin;
+    font-size: 6vmin;
+  }
+
+  .result-options {
+    width: 30vmin;
+    height: 8vmin;
+    font-size: 6vmin;
   }
 }
 
-@media (min-width: 1062px) {
+@media (min-width: 800px) {
+ #start {
+    width: 50%;
+    height: 70%;
+    gap: 3vmin;
+  }
+
+  #start-img {
+    height: 35vmin;
+  }
+
+  #start-button {
+    width: 40vmin;
+    height: 8vmin;
+    border-radius: 5vmin;
+    font-size: 6vmin;
+  }
+
+  .start-text {
+    font-size: 2vmin;
+    color: white;
+  }
+
+  #select-game-level-1 {
+    height: 80%;
+    width: 60%;
+    gap: 2vmin;
+  }
+
+  .game-level-arrows {
+    width: 8vmin;
+    height: 8vmin;
+    font-size: 6vmin;
+    border-radius: 4vmin;
+  }
+
+  #select-game-level-2 {
+    height: 80%;
+    width: 60%;
+  }
+
+  .select-game-level-img {
+    height: 40vmin;
+    width: 40vmin;
+  }
+
+  .game-options {
+    width: 50%;
+    height: 45%;
+    gap: 1vmin;
+  }
+
+  #game-level-start-1 {
+    width: 100%;
+    height: 6vmin;
+    font-size: 5vmin;
+  }
+
+  #game-level-start-2 {
+    width: 100%;
+    height: 6vmin;
+    font-size: 6vmin;
+  }
+
+  .game-options-locked {
+    width: 100%;
+    height: 5vmin;
+    gap: 1.5vmin;
+    font-size: 4vmin;
+  }
+  .game-options-locked i{
+    font-size: 3vmin;
+  }
+  .pause-options {
+    width: 45%;
+    height: 45%;
+    gap: 2vmin;
+  }
+
+  .pause-options .game-options-locked{
+    font-size: 5vmin;
+  }
+
+
+  h1 {
+    font-size: 4vmin;
+    letter-spacing: 2vmin;
+  }
+
   #choose {
-    margin-right: 0vmin;
-    margin-left: 0vmin;
+    margin-right: 15vmin;
+  }
+  #Score {
+    font-size: 4vmin;
+  }
+
+  .button {
+    width: 23vmin;
+    height: 7vmin;
+    font-size: 3vmin
+  }
+
+  #win-result {
+    width: 40%;
+    height: 50%;
+    gap: 2vmin;
+    font-size: 4vmin;
+  }
+
+  #lose-result {
+    width: 40%;
+    height: 50%;
+    gap: 2vmin;
+    font-size: 4vmin;
+  }
+
+  .result-options {
+    width: 25vmin;
+    height: 6vmin;
+    font-size: 6vmin;
   }
 }
-@media (min-width: 1300px) {
-  h1 {
-    margin-left: 3vmin ;
+
+@media (min-width: 1024px) {
+  #start {
+    width: 45%;
+    height: 70%;
+    gap: 3vmin;
+  }
+
+  #start-img {
+    height: 35vmin;
+  }
+
+  #start-button {
+    width: 40vmin;
+    height: 8vmin;
+    border-radius: 5vmin;
+    font-size: 6vmin;
+  }
+
+  .start-text {
+    font-size: 2.7vmin;
+    color: white;
+  }
+
+  #select-game-level-1 {
+    height: 80%;
+    width: 50%;
+    gap: 2vmin;
+  }
+
+  .game-level-arrows {
+    width: 8vmin;
+    height: 8vmin;
+    font-size: 6vmin;
+    border-radius: 4vmin;
+  }
+
+  #select-game-level-2 {
+    height: 80%;
+    width: 50%;
+  }
+
+  .select-game-level-img {
+    height: 38vmin;
+    width: 38vmin;
+  }
+
+  .game-options {
+    width: 50%;
+    height: 45%;
+    gap: 1vmin;
+  }
+
+  #game-level-start-1 {
+    width: 100%;
+    height: 6vmin;
+    font-size: 5vmin;
+  }
+
+  #game-level-start-2 {
+    width: 100%;
+    height: 6vmin;
+    font-size: 6vmin;
+  }
+
+  .game-options-locked {
+    width: 100%;
+    height: 5vmin;
+    gap: 1.5vmin;
     font-size: 4vmin;
-    letter-spacing: 4vmin;
+  }
+  .game-options-locked i{
+    font-size: 3vmin;
+  }
+  .pause-options {
+    width: 35%;
+    height: 45%;
+    gap: 2vmin;
+  }
+
+  .pause-options .game-options-locked{
+    font-size: 4.5vmin;
+  }
+  h1 {
+    font-size: 4vmin;
+    letter-spacing: 2vmin;
+  }
+
+  #choose {
+    margin-right: 8vmin;
+  }
+  #Score {
+    font-size: 4vmin;
+  }
+  .button {
+    width: 23vmin;
+    height: 7vmin;
+    font-size: 3vmin
+  }
+  #win-result {
+    width: 32%;
+    height: 50%;
+    gap: 2vmin;
+    font-size: 4vmin;
+  }
+
+  #lose-result {
+    width: 32%;
+    height: 50%;
+    gap: 2vmin;
+    font-size: 4vmin;
+  }
+
+  .result-options {
+    width: 25vmin;
+    height: 6vmin;
+    font-size: 6vmin;
+  }
+}
+
+@media (min-width: 1300px) {
+  #start {
+    width: 35%;
+    height: 70%;
+    gap: 3vmin;
+  }
+
+  #start-img {
+    height: 35vmin;
+  }
+
+  #start-button {
+    width: 40vmin;
+    height: 8vmin;
+    border-radius: 5vmin;
+    font-size: 6vmin;
+  }
+
+  .start-text {
+    font-size: 2.5vmin;
+  }
+
+  #select-game-level-1 {
+    height: 80%;
+    width: 40%;
+    gap: 2vmin;
+  }
+
+  .game-level-arrows {
+    width: 8vmin;
+    height: 8vmin;
+    font-size: 6vmin;
+    border-radius: 4vmin;
+  }
+
+  #select-game-level-2 {
+    height: 80%;
+    width: 40%;
+  }
+
+  .select-game-level-img {
+    height: 35vmin;
+    width: 35vmin;
+  }
+  .game-options-locked {
+    width: 100%;
+    height: 5vmin;
+    gap: 1.5vmin;
+    font-size: 4vmin;
+  }
+  .game-options-locked i{
+    font-size: 3vmin;
+  }
+  .pause-options {
+    width: 30%;
+    height: 45%;
+    gap: 2vmin;
+  }
+
+  .pause-options .game-options-locked{
+    font-size: 4.5vmin;
+  }
+  h1 {
+    font-size: 5vmin;
+    letter-spacing: 2vmin;
+  }
+
+  #choose {
+    margin-right: 8vmin;
+  }
+  #Score {
+    font-size: 4vmin;
+  }
+  .button {
+    width: 23vmin;
+    height: 7vmin;
+    font-size: 3vmin
+  }
+  #win-result {
+    width: 32%;
+    height: 50%;
+    gap: 2vmin;
+    font-size: 4vmin;
+  }
+
+  #lose-result {
+    width: 32%;
+    height: 50%;
+    gap: 2vmin;
+    font-size: 4vmin;
+  }
+
+  .result-options {
+    width: 25vmin;
+    height: 6vmin;
+    font-size: 6vmin;
+  }
+}
+
+@media (min-width: 1900px) {
+  #start {
+    width: 30%;
+    height: 70%;
+    gap: 3vmin;
+  }
+  .start-text {
+    font-size: 3vmin;
+  }
+
+  #select-game-level-1 {
+    width: 27%;
+    gap: 2vmin;
+  }
+  #select-game-level-2 {
+    height: 80%;
+    width: 27%;
+  }
+  .select-game-level-img {
+    height: 35vmin;
+    width: 35vmin;
+  }
+  #game-level-start-2 {
+    width: 100%;
+    height: 6vmin;
+    font-size: 5vmin;
+  }
+  .pause-options {
+    width: 20%;
+    height: 45%;
+    gap: 2vmin;
+  }
+  h1 {
+    font-size: 6vmin;
+    letter-spacing: 3vmin;
+  }
+  #win-result {
+    width: 20%;
+    height: 50%;
+    gap: 2vmin;
+    font-size: 4vmin;
+  }
+
+  #lose-result {
+    width: 20%;
+    height: 50%;
+    gap: 2vmin;
+    font-size: 4vmin;
+  }
+}
+
+@media (min-width: 2400px) {
+  #start {
+    width: 25%;
+    height: 70%;
+    gap: 3vmin;
+  }
+  #select-game-level-1 {
+    width: 23%;
+    gap: 2vmin;
+  }
+  #select-game-level-2 {
+    height: 80%;
+    width: 23%;
+  }
+  h1 {
+    font-size: 8vmin;
+    letter-spacing: 3vmin;
+  }
+  #win-result {
+    width: 20%;
+    height: 50%;
+    gap: 2vmin;
+    font-size: 4vmin;
+  }
+
+  #lose-result {
+    width: 20%;
+    height: 50%;
+    gap: 2vmin;
+    font-size: 4vmin;
   }
 }
