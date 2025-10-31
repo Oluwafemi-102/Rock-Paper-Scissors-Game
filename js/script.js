@@ -129,6 +129,7 @@ $(document).ready(function () {
 
   $('#start-button').click(function () {
     $('#start').hide();
+    $('#main').hide();
     $('#game-page').show();
     $('#game-level').show();
   })
@@ -181,9 +182,20 @@ $(document).ready(function () {
     $('#select-game-level-1').hide();
     $('#select-game-level-2').hide();
     $('#select-game-level-3').hide();
+    if (check === 1) {
+      // Stop autoplay
+      clearInterval(inter);
+      check = 0;
+      // Change button text & color
+      $('#toggleBtn')
+        .text("Start Autoplay")
+        .css("background-color", "green");
+    }
   })
   $('#pause-level-restart-1').click(function () {
     $('#game-level').hide();
+    $('#game-page').show();
+    $('#main').hide();
     $('#all-vs').show();
     $('#player').show();
     $('#computer').show();
@@ -204,6 +216,8 @@ $(document).ready(function () {
   })
   $('#pause-level-continue-1').click(function () {
     $('#game-level').hide();
+    $('#game-page').show();
+    $('#main').hide();
     $('#all-vs').show();
   })
   $('#pause-menu-1').click(function () {
