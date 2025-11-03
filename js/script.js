@@ -145,6 +145,7 @@ $(document).ready(function () {
   $('#main-menu-1').click(function () {
     $('#game-level').hide();
     $('#game-page').hide();
+    $('#main').hide();
     $('#start').show();
   })
   $('#game-level-start-1').click(function () {
